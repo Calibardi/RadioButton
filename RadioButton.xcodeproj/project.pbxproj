@@ -15,6 +15,8 @@
 		E30A5BE9261F055C00B58C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30A5BE7261F055C00B58C82 /* LaunchScreen.storyboard */; };
 		E30A5BF3261F2E9A00B58C82 /* RadioButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30A5BF2261F2E9A00B58C82 /* RadioButtonView.xib */; };
 		E30A5BF6261F310A00B58C82 /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A5BF5261F310A00B58C82 /* RadioButtonView.swift */; };
+		E3AC39B7261F484600946281 /* RadioButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC39B5261F484600946281 /* RadioButtonTableViewCell.swift */; };
+		E3AC39B8261F484600946281 /* RadioButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3AC39B6261F484600946281 /* RadioButtonTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E30A5BEA261F055C00B58C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E30A5BF2261F2E9A00B58C82 /* RadioButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioButtonView.xib; sourceTree = "<group>"; };
 		E30A5BF5261F310A00B58C82 /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
+		E3AC39B5261F484600946281 /* RadioButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonTableViewCell.swift; sourceTree = "<group>"; };
+		E3AC39B6261F484600946281 /* RadioButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioButtonTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				E30A5BF2261F2E9A00B58C82 /* RadioButtonView.xib */,
 				E30A5BF5261F310A00B58C82 /* RadioButtonView.swift */,
+				E3AC39B6261F484600946281 /* RadioButtonTableViewCell.xib */,
+				E3AC39B5261F484600946281 /* RadioButtonTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E30A5BE9261F055C00B58C82 /* LaunchScreen.storyboard in Resources */,
+				E3AC39B8261F484600946281 /* RadioButtonTableViewCell.xib in Resources */,
 				E30A5BE6261F055C00B58C82 /* Assets.xcassets in Resources */,
 				E30A5BF3261F2E9A00B58C82 /* RadioButtonView.xib in Resources */,
 				E30A5BE4261F055B00B58C82 /* Main.storyboard in Resources */,
@@ -152,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3AC39B7261F484600946281 /* RadioButtonTableViewCell.swift in Sources */,
 				E30A5BE1261F055B00B58C82 /* MainViewController.swift in Sources */,
 				E30A5BDD261F055B00B58C82 /* AppDelegate.swift in Sources */,
 				E30A5BF6261F310A00B58C82 /* RadioButtonView.swift in Sources */,
