@@ -15,17 +15,22 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RadioButtonView" customModule="RadioButton" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ldD-Ju-Cdv">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ldD-Ju-Cdv">
                     <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ldD-Ju-Cdv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WRW-vH-nt0"/>
+                <constraint firstItem="ldD-Ju-Cdv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bJd-ph-aWx"/>
+                <constraint firstItem="ldD-Ju-Cdv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="o5X-lH-cjl"/>
+                <constraint firstItem="ldD-Ju-Cdv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="s7u-qf-RR2"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-146" y="-80"/>
         </view>

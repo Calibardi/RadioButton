@@ -14,20 +14,9 @@ class RadioButtonTableViewCell: UITableViewCell {
 	
 	var selectedBtn: Bool = false {
 		didSet {
-			self.imageForButton.image = isAbilitato() ? UIImage(named: "record.circle.fill") : UIImage(named: "record.circle")
+			self.imageForButton.image = isAbilitato() ? UIImage(systemName: "record.circle.fill") : UIImage(systemName: "record.circle")
 		}
 	}
-	
-	override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 	
 	func isAbilitato() -> Bool {
 		return self.selectedBtn

@@ -9,9 +9,15 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+	@IBOutlet weak var radioBtnView: RadioButtonView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
+		self.radioBtnView.selectionLabelsNumber = 3
+		self.radioBtnView.labelsArray.append(SelectionElement(string: "Prova1"))
+		self.radioBtnView.labelsArray.append(SelectionElement(string: "Prova2"))
+		self.radioBtnView.labelsArray.append(SelectionElement(string: "Prova3"))
 	}
 
 

@@ -18,6 +18,7 @@ struct SelectionElement {
 		self.selected	 = false
 	}
 }
+
 class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 
 	var selectionLabelsNumber: Int		= 2 //il minimo è due, il massimo 5
@@ -47,8 +48,8 @@ class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 		tableView.delegate = self
 		tableView.dataSource = self
 		
-		let cellNib = UINib(nibName: "RadioButtonViewCell", bundle: nil)
-		self.tableView.register(cellNib, forCellReuseIdentifier: "RadioButtonViewCell")
+		let cellNib = UINib(nibName: "RadioButtonTableViewCell", bundle: nil)
+		self.tableView.register(cellNib, forCellReuseIdentifier: "RadioButtonTableViewCell")
 		
 		print("commonInit called")
 	}
@@ -62,6 +63,8 @@ class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 		for i in labelsArray.indices {
 			labelsArray[i].selected = false
 		}
+		
+		print("All elements are disabled")
 	}
 	
 	//MARK: - tableView methods
@@ -71,7 +74,7 @@ class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "RadioButtonViewCell", for: indexPath) as! RadioButtonTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "RadioButtonTableViewCell", for: indexPath) as! RadioButtonTableViewCell
 		
 		cell.label.text 	= labelsArray[indexPath.row].labelString
 		cell.selectedBtn 	= labelsArray[indexPath.row].selected
@@ -83,8 +86,7 @@ class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 		
 		disableAllSelections()
 		labelsArray[indexPath.row].selected = true
-		tableView.beginUpdates()
-		tableView.endUpdates()
+		self.tableView.reloadData()
 		
 	}
 }
