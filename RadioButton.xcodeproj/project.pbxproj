@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		E30A5BDD261F055B00B58C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A5BDC261F055B00B58C82 /* AppDelegate.swift */; };
 		E30A5BDF261F055B00B58C82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A5BDE261F055B00B58C82 /* SceneDelegate.swift */; };
-		E30A5BE1261F055B00B58C82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A5BE0261F055B00B58C82 /* ViewController.swift */; };
+		E30A5BE1261F055B00B58C82 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A5BE0261F055B00B58C82 /* MainViewController.swift */; };
 		E30A5BE4261F055B00B58C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30A5BE2261F055B00B58C82 /* Main.storyboard */; };
 		E30A5BE6261F055C00B58C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E30A5BE5261F055C00B58C82 /* Assets.xcassets */; };
 		E30A5BE9261F055C00B58C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30A5BE7261F055C00B58C82 /* LaunchScreen.storyboard */; };
+		E30A5BF3261F2E9A00B58C82 /* RadioButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30A5BF2261F2E9A00B58C82 /* RadioButtonView.xib */; };
+		E30A5BF6261F310A00B58C82 /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30A5BF5261F310A00B58C82 /* RadioButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E30A5BD9261F055B00B58C82 /* RadioButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30A5BDC261F055B00B58C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E30A5BDE261F055B00B58C82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E30A5BE0261F055B00B58C82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E30A5BE0261F055B00B58C82 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E30A5BE3261F055B00B58C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E30A5BE5261F055C00B58C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E30A5BE8261F055C00B58C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E30A5BEA261F055C00B58C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E30A5BF2261F2E9A00B58C82 /* RadioButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioButtonView.xib; sourceTree = "<group>"; };
+		E30A5BF5261F310A00B58C82 /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		E30A5BDB261F055B00B58C82 /* RadioButton */ = {
 			isa = PBXGroup;
 			children = (
+				E30A5BF8261F311200B58C82 /* Views */,
 				E30A5BDC261F055B00B58C82 /* AppDelegate.swift */,
 				E30A5BDE261F055B00B58C82 /* SceneDelegate.swift */,
-				E30A5BE0261F055B00B58C82 /* ViewController.swift */,
+				E30A5BE0261F055B00B58C82 /* MainViewController.swift */,
 				E30A5BE2261F055B00B58C82 /* Main.storyboard */,
 				E30A5BE5261F055C00B58C82 /* Assets.xcassets */,
 				E30A5BE7261F055C00B58C82 /* LaunchScreen.storyboard */,
 				E30A5BEA261F055C00B58C82 /* Info.plist */,
 			);
 			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		E30A5BF8261F311200B58C82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E30A5BF2261F2E9A00B58C82 /* RadioButtonView.xib */,
+				E30A5BF5261F310A00B58C82 /* RadioButtonView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +140,7 @@
 			files = (
 				E30A5BE9261F055C00B58C82 /* LaunchScreen.storyboard in Resources */,
 				E30A5BE6261F055C00B58C82 /* Assets.xcassets in Resources */,
+				E30A5BF3261F2E9A00B58C82 /* RadioButtonView.xib in Resources */,
 				E30A5BE4261F055B00B58C82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E30A5BE1261F055B00B58C82 /* ViewController.swift in Sources */,
+				E30A5BE1261F055B00B58C82 /* MainViewController.swift in Sources */,
 				E30A5BDD261F055B00B58C82 /* AppDelegate.swift in Sources */,
+				E30A5BF6261F310A00B58C82 /* RadioButtonView.swift in Sources */,
 				E30A5BDF261F055B00B58C82 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
