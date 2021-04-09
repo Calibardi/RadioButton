@@ -16,8 +16,14 @@ class RadioButtonTableViewCell: UITableViewCell {
         didSet {
             self.label.text = self.managedElem?.labelString
             self.imageForButton.image = isAbilitato() ? UIImage(systemName: "record.circle.fill") : UIImage(systemName: "record.circle")
-            
         }
+    }
+	
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+		imageForButton.tintColor = self.isAbilitato() ? UIColor.red : UIColor.black
     }
 	
 	func isAbilitato() -> Bool {

@@ -43,6 +43,11 @@ class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 		addSubview(contentView)
 		contentView.frame = self.bounds
 		contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+		self.layer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+
+		//Corner radius delle varie view, ordinate secondo gerarchia
+		self.contentView.layer.cornerRadius = 15
+		self.tableView.layer.cornerRadius 	= 15
 		
 		tableView.delegate = self
 		tableView.dataSource = self
@@ -77,7 +82,7 @@ class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
 		disableAllSelections()
-		selectionArray[indexPath.row].selected = true
+		selectionArray[indexPath.row].selected.toggle()
 		self.tableView.reloadData()
    
 	}

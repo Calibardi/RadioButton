@@ -16,17 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAO-Cb-rDG" customClass="RadioButtonView" customModule="RadioButton" customModuleProvider="target">
-                                <rect key="frame" x="20" y="76" width="363" height="243"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAO-Cb-rDG" customClass="RadioButtonView" customModule="RadioButton" customModuleProvider="target">
+                                <rect key="frame" x="107" y="82" width="200" height="186"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-SD-IUb" customClass="RadioButtonView" customModule="RadioButton" customModuleProvider="target">
+                                <rect key="frame" x="20" y="384" width="374" height="185"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="Z1r-BN-ral"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DAO-Cb-rDG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="7GF-K3-FbG"/>
+                            <constraint firstItem="DAO-Cb-rDG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="7Ot-X5-jDB"/>
+                            <constraint firstItem="vbu-SD-IUb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="384" id="BgC-Zl-8qs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DAO-Cb-rDG" secondAttribute="trailing" constant="107" id="GVI-ep-s1d"/>
+                            <constraint firstItem="vbu-SD-IUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GZ3-Ce-9F0"/>
+                            <constraint firstItem="vbu-SD-IUb" firstAttribute="top" secondItem="DAO-Cb-rDG" secondAttribute="bottom" constant="116" id="X1m-wD-cNV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vbu-SD-IUb" secondAttribute="trailing" constant="20" id="Y7H-MD-iN1"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="radioBtnView" destination="DAO-Cb-rDG" id="Gfm-cU-DeT"/>
+                        <outlet property="radioBtnView2" destination="vbu-SD-IUb" id="LDp-L2-bOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
