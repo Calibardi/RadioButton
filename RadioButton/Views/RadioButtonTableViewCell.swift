@@ -11,15 +11,17 @@ class RadioButtonTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var label: UILabel!
 	@IBOutlet weak var imageForButton: UIImageView!
-	
-	var selectedBtn: Bool = false {
-		didSet {
-			self.imageForButton.image = isAbilitato() ? UIImage(systemName: "record.circle.fill") : UIImage(systemName: "record.circle")
-		}
-	}
+
+    var managedElem: SelectionElement? {
+        didSet {
+            self.label.text = self.managedElem?.labelString
+            self.imageForButton.image = isAbilitato() ? UIImage(systemName: "record.circle.fill") : UIImage(systemName: "record.circle")
+            
+        }
+    }
 	
 	func isAbilitato() -> Bool {
-		return self.selectedBtn
+        return self.managedElem?.selected ?? false
 	}
     
 }

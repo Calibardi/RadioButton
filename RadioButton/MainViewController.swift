@@ -14,10 +14,9 @@ class MainViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.radioBtnView.selectionLabelsNumber = 3
-		self.radioBtnView.labelsArray.append(SelectionElement(string: "Prova1"))
-		self.radioBtnView.labelsArray.append(SelectionElement(string: "Prova2"))
-		self.radioBtnView.labelsArray.append(SelectionElement(string: "Prova3"))
+		self.radioBtnView.selectionArray.append(SelectionElement(string: "Placeholder 1"))
+        self.radioBtnView.selectionArray.append(SelectionElement(string: "Placeholder 2"))
+        self.radioBtnView.selectionArray.append(SelectionElement(string: "Placeholder 3"))
 	}
 
 

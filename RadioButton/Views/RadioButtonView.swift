@@ -21,8 +21,7 @@ struct SelectionElement {
 
 class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 
-	var selectionLabelsNumber: Int		= 2 //il minimo è due, il massimo 5
-	var labelsArray: [SelectionElement] = [SelectionElement]()
+	var selectionArray: [SelectionElement] = [SelectionElement]()
 	
 	@IBOutlet var contentView: RadioButtonView!
 	@IBOutlet weak var tableView: UITableView!
@@ -55,38 +54,31 @@ class RadioButtonView: UIView, UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	//MARK: - Class methods
-	func checkCardinality() -> Bool {
-		return self.selectionLabelsNumber == self.labelsArray.count
-	}
 	
 	func disableAllSelections() {
-		for i in labelsArray.indices {
-			labelsArray[i].selected = false
+		for i in selectionArray.indices {
+			selectionArray[i].selected = false
 		}
-		
-		print("All elements are disabled")
-	}
+    }
 	
 	//MARK: - tableView methods
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.selectionLabelsNumber
+        return self.selectionArray.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "RadioButtonTableViewCell", for: indexPath) as! RadioButtonTableViewCell
-		
-		cell.label.text 	= labelsArray[indexPath.row].labelString
-		cell.selectedBtn 	= labelsArray[indexPath.row].selected
-		
+        
+        cell.managedElem = selectionArray[indexPath.row]
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
+        
 		disableAllSelections()
-		labelsArray[indexPath.row].selected = true
+		selectionArray[indexPath.row].selected = true
 		self.tableView.reloadData()
-		
+   
 	}
 }
